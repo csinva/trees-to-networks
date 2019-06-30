@@ -1,15 +1,13 @@
-## Bridging random forests and deep neural networks.
+## Bridging trees and neural networks.
 **Code here converts sklearn tree -> pytorch DNN**
 
-
 `rf_to_dnn_ex.ipynb` shows a simple example of converting a random forest to a DNN
-
 
 Both random forests and DNNs are very strong predictive models. This [cool recent paper title "Neural Random Forests"](https://arxiv.org/pdf/1604.07143.pdf) gives a simple algorithm for exactly rewriting any random forest as a sparse neural network. This could be useful then for combining the inductive biases of both and other interesting things.
 
 ## how does it work?
 
-![](biau_19_figw.png)
+![](biau_19_fig2.png)
 
 The idea is to rewrite the neural network into 3 layers:
 
