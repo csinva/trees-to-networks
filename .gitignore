@@ -12,3 +12,6 @@ env
 **.gif
 **.DS_Store
 **.idea
+**.c
+**.so
+**.nfs*

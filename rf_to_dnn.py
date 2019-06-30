@@ -69,7 +69,22 @@ class Net(nn.Module):
         
     # placeholder so class compiles
     def forward(self, x):
-        pass
+    #     t0 = time.perf_counter()
+        x = x.reshape(x.shape[0], -1)
+        x = self.layers[0](x) 
+        t1 = time.perf_counter()
+        x[x < 0] = -1
+        x[x >= 0] = 1
+
+
+    #     t2 = time.perf_counter()
+        x = self.layers[1](x)
+        x = (x == 0).float()
+
+        x = self.layers[2](x)
+    #     t3 = time.perf_counter()
+    #     print(f't1: {t1-t0:0.2e}, t2: {t2-t1:0.2e} t3: {t3-t2:0.2e}')
+        return x
         
     
     '''

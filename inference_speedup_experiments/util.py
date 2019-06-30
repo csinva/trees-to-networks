@@ -2,7 +2,7 @@ import time
 import torch
 import numpy as np
 
-def t(func, num_reps=5):
+def t(func, num_reps=1):
     ts = []
     for num_rep in range(num_reps):
         s = time.perf_counter()
